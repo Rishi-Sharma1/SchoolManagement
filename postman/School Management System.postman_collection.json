@@ -10,7 +10,27 @@
       "name": "Add School",
       "request": {
         "method": "POST",
-        "header": []
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"ABC School\",\r\n  \"address\": \"Lucknow\",\r\n  \"latitude\": 26.8467,\r\n  \"longitude\": 80.9462\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/addSchool",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "addSchool"
+          ]
+        }
       },
       "response": []
     },
@@ -18,7 +38,28 @@
       "name": "List School",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/listSchools?latitude=26.9000&longitude=80.9462",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "26.9000"
+            },
+            {
+              "key": "longitude",
+              "value": "80.9462"
+            }
+          ]
+        }
       },
       "response": []
     }
